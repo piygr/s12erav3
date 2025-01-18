@@ -3,6 +3,9 @@
 This repository contains the implementation of a custom transformer model for text generation, utilizing the GPT-2 tokenizer from the `tiktoken` library. The project includes scripts for model definition, training, and an example input text file.
 ## Demo
 [Huggingface Space app](https://huggingface.co/spaces/piyushgrover/Decoder124M-S12ERAv3)
+
+### Sample output
+<img width="1438" alt="Image" src="https://github.com/user-attachments/assets/e034e207-1eee-4ec5-913d-5603a2178367" />
 ## Repository Structure
 
 - **`model.py`**: Defines the architecture of the custom transformer model.
