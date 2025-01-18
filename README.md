@@ -1,5 +1,51 @@
-1 epoch = 41 batches
-2460
+# s12erav3
+
+This repository contains the implementation of a custom transformer model for text generation, utilizing the GPT-2 tokenizer from the `tiktoken` library. The project includes scripts for model definition, training, and an example input text file.
+## Demo
+[Huggingface Space app](https://huggingface.co/spaces/piyushgrover/Decoder124M-S12ERAv3)
+## Repository Structure
+
+- **`model.py`**: Defines the architecture of the custom transformer model.
+- **`train.py`**: Contains the training loop and procedures for model training.
+- **`input.txt`**: Example input text file used for training or evaluation.
+- **`requirements.txt`**: Lists the dependencies required to run the project.
+- **`.gitignore`**: Specifies files and directories to be ignored by Git.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Python installed. It's recommended to use a virtual environment to manage dependencies.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/piygr/s12erav3.git
+   cd s12erav3
+   ```
+
+2. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Training the Model
+
+To train the model, run:
+```bash
+python train.py
+```
+This script will initiate the training process using the configurations defined within.
+
+#### Training Logs
+
+Training was run for 150 epochs to achieve the target loss (<0.0999)
+
+
+```
+1 epoch = 41 batches (batch size: 256)
+
 step0, loss: 10.993502616882324
 step41, loss: 6.356048583984375
 step82, loss: 5.995212078094482
@@ -10,6 +56,9 @@ step246, loss: 5.2119574546813965
 step287, loss: 5.123021125793457
 step328, loss: 4.9851884841918945
 step369, loss: 4.9308085441589355
+.
+.
+.
 step410, loss: 4.812866687774658
 step451, loss: 4.726990222930908
 step492, loss: 4.65977144241333
@@ -53,15 +102,9 @@ step2009, loss: 1.8414294719696045
 step2050, loss: 1.7314482927322388
 step2091, loss: 1.697108268737793
 step2132, loss: 1.5796211957931519
-step2173, loss: 1.5155866146087646
-step2214, loss: 1.4081870317459106
-step2255, loss: 1.3017913103103638
-step2296, loss: 1.2696470022201538
-step2337, loss: 1.2255851030349731
-step2378, loss: 1.065068006515503
-step2419, loss: 0.9824460744857788
-step2460, loss: 0.9095562100410461
-step2501, loss: 0.8338198661804199
+.
+.
+.
 step2542, loss: 0.6851575374603271
 step2583, loss: 0.7083978056907654
 step2624, loss: 0.6137531399726868
@@ -79,42 +122,9 @@ step3075, loss: 0.1983974128961563
 step3116, loss: 0.18023601174354553
 step3157, loss: 0.16102169454097748
 step3198, loss: 0.15884876251220703
-step3239, loss: 0.15755189955234528
-step3280, loss: 0.15449567139148712
-step3321, loss: 0.1487237811088562
-step3362, loss: 0.14784981310367584
-step3403, loss: 0.13969466090202332
-step3444, loss: 0.1369764804840088
-step3485, loss: 0.13246405124664307
-step3526, loss: 0.1335345059633255
-step3567, loss: 0.13125956058502197
-step3608, loss: 0.12940549850463867
-step3649, loss: 0.12408264726400375
-step3690, loss: 0.11878691613674164
-step3731, loss: 0.11653979867696762
-step3772, loss: 0.11202304065227509
-step3813, loss: 0.11509455740451813
-step3854, loss: 0.11128367483615875
-step3895, loss: 0.11193134635686874
-step3936, loss: 0.10928612947463989
-step3977, loss: 0.10907614231109619
-step4018, loss: 0.10762123763561249
-step4059, loss: 0.1060430109500885
-step4100, loss: 0.10904181748628616
-step4141, loss: 0.10567391663789749
-step4182, loss: 0.10350169241428375
-step4223, loss: 0.10579050332307816
-step4264, loss: 0.10442937910556793
-step4305, loss: 0.10684796422719955
-step4346, loss: 0.11417102068662643
-step4387, loss: 0.1177523136138916
-step4428, loss: 0.11776236444711685
-step4469, loss: 0.11211056262254715
-step4510, loss: 0.10820483416318893
-step4551, loss: 0.10798196494579315
-step4592, loss: 0.1055280789732933
-step4633, loss: 0.10295859724283218
-step4674, loss: 0.10323067754507065
+.
+.
+.
 step4715, loss: 0.10485374927520752
 step4756, loss: 0.10589515417814255
 step4797, loss: 0.10833167284727097
@@ -145,3 +155,15 @@ step5781, loss: 0.10006291419267654
 step5822, loss: 0.09813326597213745
 step5863, loss: 0.09689625352621078
 step5904, loss: 0.09795211255550385
+```
+## Usage
+
+After training, you can utilize the model for text generation tasks. Ensure that the `model.py` and `train.py` scripts are properly configured to load the trained model weights and perform inference.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+*Note: For detailed information on the implementation and usage, please refer to the comments within the respective Python scripts.*
